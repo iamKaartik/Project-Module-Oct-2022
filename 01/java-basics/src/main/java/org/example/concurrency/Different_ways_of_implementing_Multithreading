@@ -1,0 +1,40 @@
+//using inheritance
+
+class A extends Thread{
+    @override
+    public void run(){
+        for(int i=0; i < 100; i++){
+            System.out.println("Thread A - "+ (i+1));
+        }
+    }
+}
+
+class B extends Thread{
+    @override
+    public void run(){
+        for(int i=0; i < 100; i++){
+            System.out.println("Thread B - "+ (i+1));
+        }
+    }
+}
+
+class C extends Thread{
+    @override
+    public void run(){
+        for(int i=0; i < 100; i++){
+            System.out.println("Thread C - "+ (i+1));
+        }
+    }
+}
+
+public class Main{
+    public static void main(String[] args) {
+        A ob = new A();
+        B ob1 = new B();
+        C ob2 = new C();
+
+        ob.start();
+        ob1.start();
+        ob2.start();
+    }
+}
